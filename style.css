@@ -15,7 +15,9 @@ body {
     font-family: 'Special Elite', cursive, Arial, Helvetica, sans-serif;
     color: white;
     font-size: 16px;
-    flex-wrap: wrap;
+    display: flex;
+    direction: column;
+    justify-content: center;
 }
 
 p {
@@ -23,7 +25,6 @@ p {
     font-family: 'Special Elite', cursive, Arial, Helvetica, sans-serif;
     color: white;
     font-size: 16px;
-    width: 10%;
     display: block;
     background-color: black;
 }
