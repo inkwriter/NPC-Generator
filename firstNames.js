@@ -1,0 +1,1 @@
+const firstNames = ["Aragorn", "Legolas", "Gandalf", "Frodo Baggins", "Samwise Gamgee", "Gimli", "Boromir", "Arwen", "Éowyn", "Saruman"];

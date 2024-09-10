@@ -1,59 +1,42 @@
-// First Names
-const firstName = ["Name1", "Name2", "Name3"];
-const lastName = ["lastName1", "lastName2", "lastName3"];
-const emotion = ["happy", "sad", "angry"];
-const job = ["Ranger", "Doctor", "Squid"]
+// Arrays for last names, jobs, and emotions
+const lastNames = ["lastName1", "lastName2", "lastName3"];
+const emotions = ["happy", "sad", "angry"];
+const jobs = ["Ranger", "Doctor", "Squid"];
+// The firstNames array should be defined in names.js
 
 // Function to generate a random first name
 function generateFirstName() {
-    // Get a random index from the npcNames array
-    const randomIndex = Math.floor(Math.random() * firstName.length);
-
-    // Get the name at the random index
-    const randomFirstName = firstName[randomIndex];
-    return firstName[randomIndex];
+    // Get a random index from the firstNames array
+    const randomIndex = Math.floor(Math.random() * firstNames.length);
+    return firstNames[randomIndex];
 }
 
 // Function to generate a random last name
 function generateLastName() {
-    // Get a random index from the npcNames array
-    const randomIndex = Math.floor(Math.random() * lastName.length);
-
-    // Get the name at the random index
-    const randomLastName = lastName[randomIndex];
-    return lastName[randomIndex];
+    const randomIndex = Math.floor(Math.random() * lastNames.length);
+    return lastNames[randomIndex];
 }
 
-// Function to generate a random last name
+// Function to generate a random job
 function generateJob() {
-    // Get a random index from the npcNames array
-    const randomIndex = Math.floor(Math.random() * job.length);
-
-    // Get the name at the random index
-    const randomLastName = job[randomIndex];
-    return job[randomIndex];
+    const randomIndex = Math.floor(Math.random() * jobs.length);
+    return jobs[randomIndex];
 }
 
-// Function to generate a random last name
+// Function to generate a random emotion
 function generateEmotion() {
-    // Get a random index from the npcNames array
-    const randomIndex = Math.floor(Math.random() * emotion.length);
-
-    // Get the name at the random index
-    const randomEmotion = emotion[randomIndex];
-    return emotion[randomIndex];
+    const randomIndex = Math.floor(Math.random() * emotions.length);
+    return emotions[randomIndex];
 }
 
-
-// Main function to call all the other functions to produce said NPC
-
+// Main function to call all other functions and generate an NPC
 function generateNPC() {
-    const firstName = generateFirstName();
+    const firstName = generateFirstName(); // Fixed variable names
     const lastName = generateLastName();
     const job = generateJob();
     const emotion = generateEmotion();
 
-    // Display the results
+    // Display the NPC details
     const npcDetails = `${firstName} ${lastName} the ${job}, feels ${emotion}`;
     document.getElementById("npc-details").innerText = npcDetails;
 }
